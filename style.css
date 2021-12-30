@@ -1,0 +1,93 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #bebebe;
+  font-family: "Roboto Mono", monospace;
+  color: #444444;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 90%;
+  height: 10vh;
+  margin: auto;
+  align-items: center;
+  color: #a55c28;
+}
+
+.logo-container {
+  display: flex;
+  flex: 0;
+}
+
+.logo {
+  font-weight: 500;
+  margin: 5px;
+}
+
+.presentation {
+  display: flex;
+  padding-bottom: 200px;
+  width: 80%;
+  margin: auto;
+  min-height: 90vh;
+  align-items: center;
+  animation: drop 1.5s ease;
+}
+
+.introduction {
+  flex: 1;
+  text-align: center;
+  margin-top: 250px;
+}
+
+.see-more {
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.see-more a {
+  color: #444444;
+  text-decoration: none;
+  font-weight: 500;
+}
+.see-more i {
+  size: 50px;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#documentation {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  padding-top: 100px;
+}
