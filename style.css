@@ -69,13 +69,17 @@ ul {
   flex: 0;
   margin-left: 5%;
 }
+.logo-container a {
+  color: #b8703c;
+  text-decoration: none;
+}
 
 .logo {
   font-weight: 500;
   margin: 5px;
 }
 
-.presentation {
+#presentation {
   display: flex;
   padding-bottom: 200px;
   width: 80%;
@@ -124,7 +128,7 @@ ul {
   width: 80%;
   margin: auto;
   text-align: left;
-  padding-top: 100px;
+  padding-top: 125px;
   padding-bottom: 1000px;
 }
 
@@ -152,25 +156,25 @@ ul {
 
 #contexte {
   margin-top: 75vh;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 #impact {
   margin-top: 75vh;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 #cm {
   margin-top: 75vh;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 #explications {
   margin-top: 75vh;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 #solutions {
   margin-top: 75vh;
-  padding-top: 100px;
+  padding-top: 150px;
 }
