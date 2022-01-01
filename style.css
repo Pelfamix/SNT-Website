@@ -23,6 +23,10 @@ p {
   font-weight: 400;
 }
 
+ul {
+  list-style: none;
+}
+
 #header {
   position: fixed;
   display: flex;
@@ -39,6 +43,25 @@ p {
 }
 #header.active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.header-nav {
+  padding-left: 100px;
+  display: flex;
+  flex: 1;
+}
+.hn-links {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+.hn-link {
+  color: #444444;
+  text-decoration: none;
+}
+.hn-link:hover {
+  color: #b8703c;
+  transition: 0.2s;
 }
 
 .logo-container {
@@ -105,7 +128,7 @@ p {
   padding-bottom: 1000px;
 }
 
-nav {
+.menu-nav {
   height: 50vh;
   width: 100vh;
   min-width: 250px;
@@ -115,9 +138,7 @@ nav {
   justify-content: space-around;
   line-height: 50px;
 }
-ul {
-  list-style: none;
-}
+
 .menu a {
   text-decoration: none;
   padding: 0 10px;
@@ -127,4 +148,29 @@ ul {
 .menu a:hover {
   color: #b8703c;
   transition: 0.2s;
+}
+
+#contexte {
+  margin-top: 75vh;
+  padding-top: 100px;
+}
+
+#impact {
+  margin-top: 75vh;
+  padding-top: 100px;
+}
+
+#cm {
+  margin-top: 75vh;
+  padding-top: 100px;
+}
+
+#explications {
+  margin-top: 75vh;
+  padding-top: 100px;
+}
+
+#solutions {
+  margin-top: 75vh;
+  padding-top: 100px;
 }
