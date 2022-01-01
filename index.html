@@ -19,6 +19,15 @@
                 <img src="images/logo4shell-logo.png" width=110" alt="logo" />
                 <h4 class="logo">Documentation Log4Shell</h4>
             </div>
+            <nav class="header-nav">
+                <ul class="hn-links">
+                    <li><a class="hn-link" href="#contexte">Contexte</a></li>
+                    <li><a class="hn-link" href="#impact">Impact</a></li>
+                    <li><a class="hn-link" href="#cm">Criticités et menaces</a></li>
+                    <li><a class="hn-link" href="#explications">Explications</a></li>
+                    <li><a class="hn-link" href="#solutions">Solutions</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main>
@@ -39,12 +48,12 @@
 
             <section id="documentation">
                 <section class="menu">
-                    <nav>
+                    <nav class="menu-nav">
                         <h2>Menu</h2>
                         <ul>
-                            <li><a href="#contexte">Contexte</a></li>
-                            <li><a href="#impact">Impact</a></li>
-                            <li><a href="#c&m">Criticités et menaces</a></li>
+                            <li><a href="#contexte">Contexte</a></li=>
+                            <li><a href="#impact">Impact</a></liclass=>
+                            <li><a href="#cm">Criticités et menaces</a></liclass=>
                             <li><a href="#explications">Explications</a></li>
                             <li><a href="#solutions">Solutions</a></li>
                         </ul>
@@ -57,6 +66,9 @@
                         <p>Log4Shell (CVE-2021-44228) est une vulnérabilité dans <a href="https://logging.apache.org/log4j/2.x/index.html" target="_blank">Log4j</a>, une libraire de logging Java développée par <a href="https://www.apache.org" target="_blank">Apache</a>.<br>La vulnérabilité, qui existe sans être remarquée depuis 2013, a été divulguée en privé à Apache par un chercheur de l'équipe de sécurité d'<a href="https://us.alibabacloud.com/en" target="_blank">Alibaba Cloud</a> le 24 novembre 2021. Ils ont développé un patch pour pouvoir la solutionner, et a été révélée publiquement le 9 décembre 2021, lorsqu'Apache a sorti son patch 2.15.<br>Cependant, après quelques tests, il y avait encore des vulnérabilité qui subsistaient. Apache a sorti le patch 2.16, qui permet de régler, à priori, la quasi-totalité des vulnérabilités qui ont été découvertes à ce jour.</p>
                         <br>
                     </div>
+                    <div class="contexte-image">
+                        <img src="images/log4j-logo.png" alt="log4j" />
+                    </div>
                 </section>
                 <section id="impact">
                     <div class="impact-text">
@@ -65,8 +77,8 @@
                         <br>
                     </div>
                 </section>
-                <section id="c&m">
-                    <div class=c&m-text>
+                <section id="cm">
+                    <div class=cm-text>
                         <h2>Criticités et menaces</h2>
                         <p>Cette vulnérabilité <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228" target="_blank">CVE-2021-44228</a> a été classé comme "critical", avec comme score de sévérité le maximum, 10/10. Cette faille permet une exécution de code arbitraire, c'est à dire l'éxécution de code à distance à une machine sans que le propriétaire soit d'accord.<br>Un attaquant peut donc faire du déni de service, ou bien upload un ransomware sur le serveur concerné, installer des crypto-miners, des bots, etc.</p>
                         <br>
