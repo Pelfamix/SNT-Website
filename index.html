@@ -17,7 +17,7 @@
         <header id="header">
             <div class="logo-container">
                 <img src="images/logo4shell-logo.png" width=110" alt="logo" />
-                <h4 class="logo">Documentation Log4Shell</h4>
+                <a href="#presentation" class="logo">Documentation Log4Shell</a>
             </div>
             <nav class="header-nav">
                 <ul class="hn-links">
@@ -31,7 +31,7 @@
         </header>
 
         <main>
-            <section class="presentation">
+            <section id="presentation">
                 <div class="introduction">
                     <div class="intro-text">
                         <h1>Log4Shell</h1>
@@ -63,8 +63,8 @@
                 <section id="contexte">
                     <div class="contexte-text">
                         <h2>Contexte</h2>
-                        <p>Log4Shell (CVE-2021-44228) est une vulnérabilité dans <a href="https://logging.apache.org/log4j/2.x/index.html" target="_blank">Log4j</a>, une libraire de logging Java développée par <a href="https://www.apache.org" target="_blank">Apache</a>.<br>La vulnérabilité, qui existe sans être remarquée depuis 2013, a été divulguée en privé à Apache par un chercheur de l'équipe de sécurité d'<a href="https://us.alibabacloud.com/en" target="_blank">Alibaba Cloud</a> le 24 novembre 2021. Ils ont développé un patch pour pouvoir la solutionner, et a été révélée publiquement le 9 décembre 2021, lorsqu'Apache a sorti son patch 2.15.<br>Cependant, après quelques tests, il y avait encore des vulnérabilité qui subsistaient. Apache a sorti le patch 2.16, qui permet de régler, à priori, la quasi-totalité des vulnérabilités qui ont été découvertes à ce jour.</p>
                         <br>
+                        <p>Log4Shell (CVE-2021-44228) est une vulnérabilité dans <a href="https://logging.apache.org/log4j/2.x/index.html" target="_blank">Log4j</a>, une libraire de logging Java développée par <a href="https://www.apache.org" target="_blank">Apache</a>.<br>La vulnérabilité, qui existe sans être remarquée depuis 2013, a été divulguée en privé à Apache par un chercheur de l'équipe de sécurité d'<a href="https://us.alibabacloud.com/en" target="_blank">Alibaba Cloud</a> le 24 novembre 2021. Ils ont développé un patch pour pouvoir la solutionner, et a été révélée publiquement le 9 décembre 2021, lorsqu'Apache a sorti son patch 2.15.<br>Cependant, après quelques tests, il y avait encore des vulnérabilité qui subsistaient. Apache a sorti le patch 2.16, qui permet de régler, à priori, la quasi-totalité des vulnérabilités qui ont été découvertes à ce jour.</p>
                     </div>
                     <div class="contexte-image">
                     </div>
@@ -72,22 +72,22 @@
                 <section id="impact">
                     <div class="impact-text">
                         <h2>Impact</h2>
-                        <p>Le nombre de systèmes et le nombre d'applications qui sont impactés par cette vulnérabilité est très importante. Log4j est utilisée par énormément d'applications, et la quasi-totalité des versions de cette librairie est concernée (toutes les versions en dessous de 2.17). Ces applications peuvent être par exemple des programmes privés, mais peuvent aussi être des programmes commerciaux publics, notamment <i><a href="https://www.minecraft.net/fr-fr" target="_blank">Minecraft: Java Edition</a></i>, <a href="https://store.steampowered.com" target="_blank">Steam</a>, <a href="http://aws.amazon.com/" target="_blank">Amazon Web Services</a>, etc.</p>
                         <br>
+                        <p>Le nombre de systèmes et le nombre d'applications qui sont impactés par cette vulnérabilité est très importante. Log4j est utilisée par énormément d'applications, et la quasi-totalité des versions de cette librairie est concernée (toutes les versions en dessous de 2.17). Ces applications peuvent être par exemple des programmes privés, mais peuvent aussi être des programmes commerciaux publics, notamment <i><a href="https://www.minecraft.net/fr-fr" target="_blank">Minecraft: Java Edition</a></i>, <a href="https://store.steampowered.com" target="_blank">Steam</a>, <a href="http://aws.amazon.com/" target="_blank">Amazon Web Services</a>, etc.</p>
                     </div>
                 </section>
                 <section id="cm">
                     <div class=cm-text>
                         <h2>Criticités et menaces</h2>
-                        <p>Cette vulnérabilité <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228" target="_blank">CVE-2021-44228</a> a été classé comme "critical", avec comme score de sévérité le maximum, 10/10. Cette faille permet une exécution de code arbitraire, c'est à dire l'éxécution de code à distance à une machine sans que le propriétaire soit d'accord.<br>Un attaquant peut donc faire du déni de service, ou bien upload un ransomware sur le serveur concerné, installer des crypto-miners, des bots, etc.</p>
                         <br>
+                        <p>Cette vulnérabilité <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228" target="_blank">CVE-2021-44228</a> a été classé comme "critical", avec comme score de sévérité le maximum, 10/10. Cette faille permet une exécution de code arbitraire, c'est à dire l'éxécution de code à distance à une machine sans que le propriétaire soit d'accord.<br>Un attaquant peut donc faire du déni de service, ou bien upload un ransomware sur le serveur concerné, installer des crypto-miners, des bots, etc.</p>
                     </div>
                 </section>
                 <section id="explications">
                     <div class="explications-text">
                         <h2>Explication de la vulnérabilité</h2>
-                        <p>Chaque fois que l'on trouve `${expression}`, les mécanismes de recherche Java trouvent la valeur de l'expression et la remplacent.<br>La recherche JNDI prend en charge des protocoles tels que LDAP, RMI, DNS et IIOP. Cependant, aucun contrôle n'est effectué sur les données récupérées à distance, et si le serveur distant est contrôlé par un attaquant, cela peut donner lieu à une injection de code, étant donné que c'est ensuite exécuté par le serveur.<br></p>
                         <br>
+                        <p>Chaque fois que l'on trouve `${expression}`, les mécanismes de recherche Java trouvent la valeur de l'expression et la remplacent.<br>La recherche JNDI prend en charge des protocoles tels que LDAP, RMI, DNS et IIOP. Cependant, aucun contrôle n'est effectué sur les données récupérées à distance, et si le serveur distant est contrôlé par un attaquant, cela peut donner lieu à une injection de code, étant donné que c'est ensuite exécuté par le serveur.<br></p>
                     </div>
                     <div class="explications-schema">
                         e
@@ -96,8 +96,8 @@
                 <section id="solutions">
                     <div href="solutions-text">
                         <h2>Solutions</h2>
-                        <p>Malgré le fait que certains patchs existent déjà, il peut encore y avoir d'autres vulnérabilités présentes. La première chose à faire, est de continuer à s'informer au fur et à mesure.<br>De plus, Apache a déjà posté <a href="https://logging.apache.org/log4j/2.x/security.html" target="_blank">quelques articles</a> pour contrer cette faille. La seule solution pour l'instant est de désactiver cette fonction de recherche JNDI. Il font donc soit mettre à jour Log4j vers <a href="https://logging.apache.org/log4j/2.x/download.html" target="_blank">les versions les plus récentes</a>, soit désactiver manuellement la classe entière.<br> Une autre mesure à prendre est de mettre des filtres en place, au niveau des pare-feux par exemple, pour tenter de filtrer les requêtes HTTP qui exploitent la vulnérabilité (il est conseillé de considérer cette mesure comme complémentaire, car les filtrages qui se basent sur des patternes peuvent être contournés, et ne protègent pas entièrement le serveur).</p>
                         <br>
+                        <p>Malgré le fait que certains patchs existent déjà, il peut encore y avoir d'autres vulnérabilités présentes. La première chose à faire, est de continuer à s'informer au fur et à mesure.<br>De plus, Apache a déjà posté <a href="https://logging.apache.org/log4j/2.x/security.html" target="_blank">quelques articles</a> pour contrer cette faille. La seule solution pour l'instant est de désactiver cette fonction de recherche JNDI. Il font donc soit mettre à jour Log4j vers <a href="https://logging.apache.org/log4j/2.x/download.html" target="_blank">les versions les plus récentes</a>, soit désactiver manuellement la classe entière.<br> Une autre mesure à prendre est de mettre des filtres en place, au niveau des pare-feux par exemple, pour tenter de filtrer les requêtes HTTP qui exploitent la vulnérabilité (il est conseillé de considérer cette mesure comme complémentaire, car les filtrages qui se basent sur des patternes peuvent être contournés, et ne protègent pas entièrement le serveur).</p>
                     </div>
                 </section>
             </section>
