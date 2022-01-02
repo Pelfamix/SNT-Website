@@ -96,7 +96,8 @@ ul {
 }
 
 .see-more {
-  margin-top: 250px;
+  text-align: center;
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
 }
@@ -128,53 +129,53 @@ ul {
   width: 80%;
   margin: auto;
   text-align: left;
-  padding-top: 125px;
-  padding-bottom: 1000px;
-}
-
-.menu-nav {
-  height: 50vh;
-  width: 100vh;
-  min-width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: space-around;
-  line-height: 50px;
-}
-
-.menu a {
-  text-decoration: none;
-  padding: 0 10px;
-  font-weight: 500;
-  color: #444444;
-}
-.menu a:hover {
-  color: #b8703c;
-  transition: 0.2s;
+  padding-bottom: 72px;
 }
 
 #contexte {
   margin-top: 75vh;
   padding-top: 150px;
+  text-align: center;
 }
 
 #impact {
   margin-top: 75vh;
   padding-top: 150px;
+  text-align: center;
 }
 
 #cm {
   margin-top: 75vh;
   padding-top: 150px;
+  text-align: center;
 }
 
 #explications {
   margin-top: 75vh;
   padding-top: 150px;
+  text-align: center;
 }
 
 #solutions {
   margin-top: 75vh;
   padding-top: 150px;
+  text-align: center;
+}
+
+#minecraft {
+  margin-top: 75vh;
+  padding-top: 150px;
+  text-align: center;
+}
+#minecraft iframe {
+  margin: 0 auto;
+  margin-top: 25px;
+  display: block;
+}
+
+footer {
+  padding: 12px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
