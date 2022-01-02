@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
+        <link rel="icon"  type="image/png" sizes="16×16" href="images/log4j-logo.png" />
         <title>Documentation Log4Shell</title>
     </head>
 
@@ -47,61 +48,71 @@
             </section>
 
             <section id="documentation">
-                <section class="menu">
-                    <nav class="menu-nav">
-                        <h2>Menu</h2>
-                        <ul>
-                            <li><a href="#contexte">Contexte</a></li=>
-                            <li><a href="#impact">Impact</a></liclass=>
-                            <li><a href="#cm">Criticités et menaces</a></liclass=>
-                            <li><a href="#explications">Explications</a></li>
-                            <li><a href="#solutions">Solutions</a></li>
-                        </ul>
-                        <br>
-                    </nav>
-                </section>
                 <section id="contexte">
-                    <div class="contexte-text">
-                        <h2>Contexte</h2>
-                        <br>
-                        <p>Log4Shell (CVE-2021-44228) est une vulnérabilité dans <a href="https://logging.apache.org/log4j/2.x/index.html" target="_blank">Log4j</a>, une libraire de logging Java développée par <a href="https://www.apache.org" target="_blank">Apache</a>.<br>La vulnérabilité, qui existe sans être remarquée depuis 2013, a été divulguée en privé à Apache par un chercheur de l'équipe de sécurité d'<a href="https://us.alibabacloud.com/en" target="_blank">Alibaba Cloud</a> le 24 novembre 2021. Ils ont développé un patch pour pouvoir la solutionner, et a été révélée publiquement le 9 décembre 2021, lorsqu'Apache a sorti son patch 2.15.<br>Cependant, après quelques tests, il y avait encore des vulnérabilité qui subsistaient. Apache a sorti le patch 2.16, qui permet de régler, à priori, la quasi-totalité des vulnérabilités qui ont été découvertes à ce jour.</p>
-                    </div>
-                    <div class="contexte-image">
+                    <h2>Contexte</h2>
+                    <br>
+                    <p>Log4Shell (CVE-2021-44228) est une vulnérabilité dans <a href="https://logging.apache.org/log4j/2.x/index.html" target="_blank">Log4j</a>, une libraire de logging Java développée par <a href="https://www.apache.org" target="_blank">Apache</a>.<br><br>La vulnérabilité, qui existe sans être remarquée depuis 2013, a été divulguée en privé à Apache par un chercheur de l'équipe de sécurité d'<a href="https://us.alibabacloud.com/en" target="_blank">Alibaba Cloud</a> le 24 novembre 2021. Ils ont développé un patch pour pouvoir la solutionner, et a été révélée publiquement le 9 décembre 2021,<br>lorsqu'Apache a sorti son patch 2.15.<br><br>Cependant, après quelques tests, il y avait encore des vulnérabilité qui subsistaient. Apache a sorti le patch 2.16, qui permet de régler, à priori, la quasi-totalité des vulnérabilités qui ont été découvertes à ce jour.</p>
+                    <div class="see-more">
+                        <a href="#impact">Lire la suite</a>
+                        <i class="fas fa-angle-down fa-2x"></i>
                     </div>
                 </section>
                 <section id="impact">
-                    <div class="impact-text">
-                        <h2>Impact</h2>
-                        <br>
-                        <p>Le nombre de systèmes et le nombre d'applications qui sont impactés par cette vulnérabilité est très importante. Log4j est utilisée par énormément d'applications, et la quasi-totalité des versions de cette librairie est concernée (toutes les versions en dessous de 2.17). Ces applications peuvent être par exemple des programmes privés, mais peuvent aussi être des programmes commerciaux publics, notamment <i><a href="https://www.minecraft.net/fr-fr" target="_blank">Minecraft: Java Edition</a></i>, <a href="https://store.steampowered.com" target="_blank">Steam</a>, <a href="http://aws.amazon.com/" target="_blank">Amazon Web Services</a>, etc.</p>
+                    <h2>Impact</h2>
+                    <br>
+                    <p>Le nombre de systèmes et le nombre d'applications qui sont impactés par cette vulnérabilité est très importante. Log4j est utilisée par énormément d'applications, et la quasi-totalité des versions de cette librairie est concernée (toutes les versions en dessous de 2.17). Ces applications peuvent être par exemple des programmes privés, mais peuvent aussi être des programmes commerciaux publics,<br>notamment <i><a href="https://www.minecraft.net/fr-fr" target="_blank">Minecraft: Java Edition</a></i>, <a href="https://store.steampowered.com" target="_blank">Steam</a>, <a href="http://aws.amazon.com/" target="_blank">Amazon Web Services</a>, etc.</p>
+                    <div class="see-more">
+                        <a href="#cm">Lire la suite</a>
+                        <i class="fas fa-angle-down fa-2x"></i>
                     </div>
                 </section>
                 <section id="cm">
-                    <div class=cm-text>
-                        <h2>Criticités et menaces</h2>
-                        <br>
-                        <p>Cette vulnérabilité <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228" target="_blank">CVE-2021-44228</a> a été classé comme "critical", avec comme score de sévérité le maximum, 10/10. Cette faille permet une exécution de code arbitraire, c'est à dire l'éxécution de code à distance à une machine sans que le propriétaire soit d'accord.<br>Un attaquant peut donc faire du déni de service, ou bien upload un ransomware sur le serveur concerné, installer des crypto-miners, des bots, etc.</p>
+                    <h2>Criticités et menaces</h2>
+                    <br>
+                    <p>Cette vulnérabilité <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228" target="_blank">CVE-2021-44228</a> a été classé comme "critical",<br>avec comme score de sévérité le maximum, 10/10 (pour la première fois dans l'histoire d'Internet).<br><br>Cette faille permet une exécution de code arbitraire, c'est à dire l'éxécution de code à distance à une machine sans que le propriétaire soit d'accord.<br>Un attaquant peut donc faire du déni de service, ou bien upload un ransomware sur le serveur concerné, installer des crypto-miners, des bots, voler des informations de paiement et des comptes, etc.</p>
+                    <div class="see-more">
+                        <a href="#explications">Lire la suite</a>
+                        <i class="fas fa-angle-down fa-2x"></i>
                     </div>
                 </section>
                 <section id="explications">
-                    <div class="explications-text">
-                        <h2>Explication de la vulnérabilité</h2>
-                        <br>
-                        <p>Chaque fois que l'on trouve `${expression}`, les mécanismes de recherche Java trouvent la valeur de l'expression et la remplacent.<br>La recherche JNDI prend en charge des protocoles tels que LDAP, RMI, DNS et IIOP. Cependant, aucun contrôle n'est effectué sur les données récupérées à distance, et si le serveur distant est contrôlé par un attaquant, cela peut donner lieu à une injection de code, étant donné que c'est ensuite exécuté par le serveur.<br></p>
-                    </div>
-                    <div class="explications-schema">
-                        e
+                    <h2>Explication de la vulnérabilité</h2>
+                    <br>
+                    <p>Chaque fois que l'on trouve `${expression}`, les mécanismes de recherche Java trouvent la valeur de l'expression et la remplacent.<br>La recherche JNDI prend en charge des protocoles tels que LDAP, RMI, DNS et IIOP. Cependant, aucun contrôle n'est effectué sur les données récupérées à distance, et si le serveur distant est contrôlé par un attaquant, cela peut donner lieu à une injection de code, étant donné que le serveur l'exécute.<br><br>En somme, un attaquant peut envoyer une requête HTTP avec le protocole LDAP avec une adresse IP qu'il contrôle à un serveur Log4j vulnérable, en indiquant qu'il faut récupérer le code de l'attaquant. Cet attaquant aura installé son propre serveur LDAP. Le serveur attaqué envoie une requête à ce serveur LDAP, contenant un bout de code malveillant et qui l'envoie directement au serveur Log4j. Une fois le code reçu, le serveur exécute le code directement, sans contrôle.<br><br>Dans cet <a href="https://youtu.be/KA5Pyd258kw" target="_blank">exemple</a>, l'attaquant a ouvert le logiciel calc.exe (la calculatrice) avec log4shell sur l'ordinateur de tous les joueurs d'un serveur Minecraft (dans cet exemple, l'utilisateur a uniquement testé le programme tout seul sur un serveur, mais si un autre joueur était connecté, la calculatrice se serait aussi exécutée dans son ordinateur).</p>
+                    <div class="see-more">
+                        <a href="#solutions">Lire la suite</a>
+                        <i class="fas fa-angle-down fa-2x"></i>
                     </div>
                 </section>
                 <section id="solutions">
-                    <div href="solutions-text">
-                        <h2>Solutions</h2>
-                        <br>
-                        <p>Malgré le fait que certains patchs existent déjà, il peut encore y avoir d'autres vulnérabilités présentes. La première chose à faire, est de continuer à s'informer au fur et à mesure.<br>De plus, Apache a déjà posté <a href="https://logging.apache.org/log4j/2.x/security.html" target="_blank">quelques articles</a> pour contrer cette faille. La seule solution pour l'instant est de désactiver cette fonction de recherche JNDI. Il font donc soit mettre à jour Log4j vers <a href="https://logging.apache.org/log4j/2.x/download.html" target="_blank">les versions les plus récentes</a>, soit désactiver manuellement la classe entière.<br> Une autre mesure à prendre est de mettre des filtres en place, au niveau des pare-feux par exemple, pour tenter de filtrer les requêtes HTTP qui exploitent la vulnérabilité (il est conseillé de considérer cette mesure comme complémentaire, car les filtrages qui se basent sur des patternes peuvent être contournés, et ne protègent pas entièrement le serveur).</p>
+                    <h2>Solutions</h2>
+                    <br>
+                    <p>Malgré le fait que certains patchs existent déjà, il peut encore y avoir d'autres vulnérabilités présentes. La première chose à faire, est de continuer à s'informer au fur et à mesure.De plus, Apache a déjà posté <a href="https://logging.apache.org/log4j/2.x/security.html" target="_blank">quelques articles</a> pour contrer cette faille. La seule solution pour l'instant est de désactiver cette fonction de recherche JNDI. Il font donc soit mettre à jour Log4j vers <a href="https://logging.apache.org/log4j/2.x/download.html" target="_blank">les versions les plus récentes</a>,<br>soit désactiver manuellement la classe entière.<br><br> Une autre mesure à prendre est de mettre des filtres en place, au niveau des pare-feux par exemple, pour tenter de filtrer les requêtes HTTP qui exploitent la vulnérabilité (il est conseillé de considérer cette mesure comme complémentaire, car les filtrages qui se basent sur des patternes peuvent être contournés, et ne protègent pas entièrement le serveur).</p>
+                    <div class="see-more">
+                        <i class="fas fa-angle-up fa-2x"></i>
+                        <a href="#presentation">Revenir en haut de page</a>
+                    </div>
+                    <div class="see-more">
+                        <a href="#minecraft">Voir un exemple concret</a>
+                        <i class="fas fa-angle-down fa-2x"></i>
+                    </div>
+                </section>
+                <section id="minecraft">
+                    <h2>Log4Shell dans Minecraft</h2>
+                    <br>
+                    <p>Pour un exemple concret, voici une vidéo qui se penche sur la vulnérabilité dans Minecraft (en anglais).</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z22O5uEsF6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="see-more">
+                        <i class="fas fa-angle-up fa-2x"></i>
+                        <a href="#presentation">Revenir en haut de page</a>
                     </div>
                 </section>
             </section>
         </main>
+
+        <footer>
+            <h3>Site réalisé par LAENG Brandon dans le cadre du cours de SNT.</h3>
+        </footer>
 
         <script>
             var header = document.getElementById('header')
